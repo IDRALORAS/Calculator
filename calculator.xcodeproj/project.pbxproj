@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					F21A53961F66610600C4E0CF = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = HNEBJPTVTK;
 						ProvisioningStyle = Automatic;
 					};
 					F21A53AA1F66610600C4E0CF = {
@@ -414,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HNEBJPTVTK;
 				INFOPLIST_FILE = calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.calculator;
@@ -426,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HNEBJPTVTK;
 				INFOPLIST_FILE = calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.calculator;
@@ -507,6 +510,7 @@
 				F21A53C11F66610600C4E0CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F21A53C21F66610600C4E0CF /* Build configuration list for PBXNativeTarget "calculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +519,7 @@
 				F21A53C41F66610600C4E0CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F21A53C51F66610600C4E0CF /* Build configuration list for PBXNativeTarget "calculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				F21A53C71F66610600C4E0CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
