@@ -1,1 +1,1 @@
-This is a basic calculator application for iOS, made by Ashu.
+This is a basic calculator application for Android.
