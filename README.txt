@@ -1,1 +1,1 @@
-This is a basic calculator application for iOS.
+HIIIIIIIIIIIIIII! HOW ARE YOU? GOOD? GOOD.
