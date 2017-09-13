@@ -1,1 +1,1 @@
-This is a basic calculator application.
+This is a basic calculator application for iOS.
