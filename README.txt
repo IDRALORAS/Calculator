@@ -1,1 +1,1 @@
-This is a basic calculator application for Android.
+HIIIIIIIIIIIIIII! HOW ARE YOU? GOOD? GOOD AS A FRESH APPLE.
