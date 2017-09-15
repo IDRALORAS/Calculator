@@ -1,1 +1,1 @@
-HIIIIIIIIIIIIIII! HOW ARE YOU? GOOD? GOOD AS A FRESH APPLE.
+This is the updated calculator.
