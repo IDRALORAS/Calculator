@@ -332,26 +332,26 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button0" destination="i0N-c7-EUm" id="Bkw-92-VjZ"/>
-                        <outlet property="button1" destination="uJk-xe-XZP" id="2Ho-51-nxG"/>
-                        <outlet property="button10" destination="oLR-UM-awr" id="c9V-EU-tm9"/>
-                        <outlet property="button11" destination="2WU-Ou-chO" id="jq8-XX-nlu"/>
-                        <outlet property="button12" destination="0Cc-G1-eTj" id="9Rc-fm-lVN"/>
-                        <outlet property="button13" destination="jWW-NQ-2yL" id="4Jo-cR-1Lr"/>
-                        <outlet property="button14" destination="BDp-hp-yfU" id="qnu-G5-KJl"/>
-                        <outlet property="button15" destination="szz-vM-EvH" id="DBz-9k-W6a"/>
-                        <outlet property="button16" destination="8NG-CD-soZ" id="Lhg-2I-lYv"/>
-                        <outlet property="button17" destination="CrC-UW-lnF" id="AM9-TX-L0n"/>
-                        <outlet property="button18" destination="Jc3-J8-Tv0" id="Nne-st-f7j"/>
-                        <outlet property="button2" destination="HvS-bd-yht" id="gcq-Vi-moh"/>
-                        <outlet property="button3" destination="ifI-kN-gtm" id="MEg-d0-Nyb"/>
-                        <outlet property="button4" destination="OmO-xR-476" id="hba-ge-FFf"/>
-                        <outlet property="button5" destination="K4r-C2-nHd" id="s61-IU-p9c"/>
-                        <outlet property="button6" destination="UlG-y6-o0A" id="a07-lL-grM"/>
-                        <outlet property="button7" destination="lhc-3Q-kXv" id="U82-Ev-wJm"/>
-                        <outlet property="button8" destination="hig-hH-mxa" id="PMr-cc-adM"/>
-                        <outlet property="button9" destination="s2j-Zr-e9N" id="Ked-s3-QSw"/>
                         <outlet property="label" destination="CmF-nb-XQM" id="QpW-cb-ein"/>
+                        <outletCollection property="buttons" destination="oLR-UM-awr" collectionClass="NSMutableArray" id="VxD-5Q-RQo"/>
+                        <outletCollection property="buttons" destination="2WU-Ou-chO" collectionClass="NSMutableArray" id="W64-pi-iHP"/>
+                        <outletCollection property="buttons" destination="0Cc-G1-eTj" collectionClass="NSMutableArray" id="Twx-on-63E"/>
+                        <outletCollection property="buttons" destination="jWW-NQ-2yL" collectionClass="NSMutableArray" id="0AP-DP-raZ"/>
+                        <outletCollection property="buttons" destination="lhc-3Q-kXv" collectionClass="NSMutableArray" id="CeR-re-yJh"/>
+                        <outletCollection property="buttons" destination="hig-hH-mxa" collectionClass="NSMutableArray" id="vcd-UW-XnR"/>
+                        <outletCollection property="buttons" destination="s2j-Zr-e9N" collectionClass="NSMutableArray" id="Gte-pN-f2m"/>
+                        <outletCollection property="buttons" destination="BDp-hp-yfU" collectionClass="NSMutableArray" id="JhV-SG-HgK"/>
+                        <outletCollection property="buttons" destination="OmO-xR-476" collectionClass="NSMutableArray" id="aTY-Ay-HZA"/>
+                        <outletCollection property="buttons" destination="K4r-C2-nHd" collectionClass="NSMutableArray" id="vQj-fj-5Ze"/>
+                        <outletCollection property="buttons" destination="UlG-y6-o0A" collectionClass="NSMutableArray" id="dNA-ea-NRI"/>
+                        <outletCollection property="buttons" destination="szz-vM-EvH" collectionClass="NSMutableArray" id="LjD-Bv-HgB"/>
+                        <outletCollection property="buttons" destination="uJk-xe-XZP" collectionClass="NSMutableArray" id="bmo-Gr-EdM"/>
+                        <outletCollection property="buttons" destination="HvS-bd-yht" collectionClass="NSMutableArray" id="0CN-Dw-vy7"/>
+                        <outletCollection property="buttons" destination="ifI-kN-gtm" collectionClass="NSMutableArray" id="09Z-1f-Vco"/>
+                        <outletCollection property="buttons" destination="8NG-CD-soZ" collectionClass="NSMutableArray" id="uYq-Av-ZSD"/>
+                        <outletCollection property="buttons" destination="i0N-c7-EUm" collectionClass="NSMutableArray" id="IY1-qw-v6G"/>
+                        <outletCollection property="buttons" destination="CrC-UW-lnF" collectionClass="NSMutableArray" id="msM-Af-Bh0"/>
+                        <outletCollection property="buttons" destination="Jc3-J8-Tv0" collectionClass="NSMutableArray" id="9e3-Ty-WcN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

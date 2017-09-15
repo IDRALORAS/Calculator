@@ -17,25 +17,9 @@ class ViewController: UIViewController {
     var calculatedValue = 0.0
     
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button0: UIButton!
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
-    @IBOutlet weak var button5: UIButton!
-    @IBOutlet weak var button6: UIButton!
-    @IBOutlet weak var button7: UIButton!
-    @IBOutlet weak var button8: UIButton!
-    @IBOutlet weak var button9: UIButton!
-    @IBOutlet weak var button10: UIButton!
-    @IBOutlet weak var button11: UIButton!
-    @IBOutlet weak var button12: UIButton!
-    @IBOutlet weak var button13: UIButton!
-    @IBOutlet weak var button14: UIButton!
-    @IBOutlet weak var button15: UIButton!
-    @IBOutlet weak var button16: UIButton!
-    @IBOutlet weak var button17: UIButton!
-    @IBOutlet weak var button18: UIButton!
+    
+    @IBOutlet var buttons: [UIButton]!
+    
     
     
     func containsOperator() -> Bool {
@@ -259,24 +243,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        button0.isExclusiveTouch = true
-        button1.isExclusiveTouch = true
-        button2.isExclusiveTouch = true
-        button3.isExclusiveTouch = true
-        button4.isExclusiveTouch = true
-        button5.isExclusiveTouch = true
-        button6.isExclusiveTouch = true
-        button7.isExclusiveTouch = true
-        button8.isExclusiveTouch = true
-        button9.isExclusiveTouch = true
-        button10.isExclusiveTouch = true
-        button11.isExclusiveTouch = true
-        button12.isExclusiveTouch = true
-        button13.isExclusiveTouch = true
-        button14.isExclusiveTouch = true
-        button15.isExclusiveTouch = true
-        button16.isExclusiveTouch = true
-        button17.isExclusiveTouch = true
+        buttons.forEach { ( button: UIButton) in
+            button.isExclusiveTouch = true
+        }
     }
     
     override func didReceiveMemoryWarning() {
