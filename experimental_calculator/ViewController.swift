@@ -13,14 +13,42 @@ class ViewController: UIViewController {
     var lastVersionOfDisplay = "" //used to replace operators if user accidentally types in wrong operator
     var isDisplayCleared = true //used to determine whether or not the label should be cleared (i.e if error is found and user enters a number again)
     var areThereTwoNumbers = false
-    var isThereAnOperator = false //used as a measure to determine if an operator can be added to the label
+    var isThereAnOperator = false //used as a measure to determine if an operator can be added to the label; takes into account negateValue method
     var calculatedValue = 0.0
     
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet var buttons: [UIButton]!
+
+    var display: String {
+        get {
+            return label.text!
+        }
+    }
     
+    var isErrorShown: Bool {
+        get {
+            return display == "Error"
+        }
+    }
     
+    var components: [String] {
+        get {
+            return display.components(separatedBy: .whitespaces)
+        }
+    }
+    
+    var numOfTermsInDisplay: Int {
+        get {
+            return components.count
+        }
+    }
+    
+    var secondNumberAvailable: Bool {
+        get {
+            return numOfTermsInDisplay > 2
+        }
+    }
     
     func containsOperator() -> Bool {
         return label.text!.range(of:"+") != nil || label.text!.range(of:"-") != nil || label.text!.range(of:"÷") != nil || label.text!.range(of:"×") != nil
@@ -47,6 +75,7 @@ class ViewController: UIViewController {
         isThereAnOperator = true
     }
     
+    
     /**
      Set function that changes the content of label.text if there is only a single number in label.text shown by the lack of a white space
      - param % button
@@ -54,14 +83,9 @@ class ViewController: UIViewController {
      and converts result back into label
      */
     @IBAction func findPercentage(_ sender: UIButton) {
-        let display = label.text!
-        let numOfTermsInDisplay = display.components(separatedBy: .whitespaces).count
-        let isErrorShown = display == "Error"
-        
         if(numOfTermsInDisplay  > 1 || isErrorShown){
             return
         }
-        
         let val = Double(display)!/100.0
         label.text = String(val)
     }
@@ -72,15 +96,9 @@ class ViewController: UIViewController {
      - return Negates the first number in the label.text
      */
     @IBAction func negateValue(_ sender: UIButton) {
-        let display = label.text!
-        let isErrorShown = display == "Error"
-        
         if(isErrorShown){
             return
         }
-        
-        let components =  display.components(separatedBy: .whitespaces)
-        let secondNumberAvailable = components.count > 2
         
         if(secondNumberAvailable){
             let secondNumberEmpty = components[2] == ""
@@ -114,11 +132,9 @@ class ViewController: UIViewController {
      - return Inserts digit at the end of the label.text
      */
     @IBAction func insertNumbers(_ sender: UIButton) {
-        let display = label.text!
         let isDisplayZero = display == "0" || display == "-0"
-        let isDisplayError = display == "Error"
         
-        if isDisplayZero || isDisplayError || !isDisplayCleared {
+        if isDisplayZero || isErrorShown || !isDisplayCleared {
             isDisplayCleared = true
             label.text = String(sender.tag-1)
         }
@@ -132,11 +148,9 @@ class ViewController: UIViewController {
      - param '.' button
      */
     @IBAction func addPoint(_ sender: UIButton) {
-        let display = label.text!
-        let isDisplayError = display == "Error"
         let isPointInDisplay = display.range(of:".") != nil
         
-        if isDisplayError || isPointInDisplay {
+        if isErrorShown || isPointInDisplay {
             return
         }
         
@@ -153,12 +167,7 @@ class ViewController: UIViewController {
      - param '×', '-', '+', or '÷' button
      */
     @IBAction func insertOperator(_ sender: UIButton) {
-        let display = label.text!
-        let components =  display.components(separatedBy: .whitespaces)
-        let secondNumberAvailable = components.count > 2
-        let isDisplayError = display == "Error"
-        
-        if isDisplayError {
+        if isErrorShown {
             return
         }
         
@@ -205,12 +214,7 @@ class ViewController: UIViewController {
      - param '=' button
      */
     @IBAction func calculate(_ sender: UIButton) {
-        let display = label.text!
-        
-        let components =  display.components(separatedBy: .whitespaces)
-        let secondNumberAvailable = components.count > 2
         let isLengthOfComponentsOne = components.count == 1
-        let isDisplayError = display == "Error"
         
         if(secondNumberAvailable){
             let secondNumberEmpty = components[2] == ""
@@ -218,7 +222,7 @@ class ViewController: UIViewController {
                 return
             }
         }
-        else if(isLengthOfComponentsOne || isDisplayError){
+        else if(isLengthOfComponentsOne || isErrorShown){
             return
         }
         
